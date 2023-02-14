@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAD84AFA299BC985002B0E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84AF9299BC985002B0E9E /* AppDelegate.swift */; };
+		DAD84AFC299BC985002B0E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84AFB299BC985002B0E9E /* SceneDelegate.swift */; };
+		DAD84AFE299BC985002B0E9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84AFD299BC985002B0E9E /* ViewController.swift */; };
+		DAD84B01299BC985002B0E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD84AFF299BC985002B0E9E /* Main.storyboard */; };
+		DAD84B04299BC985002B0E9E /* MapRandomizerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAD84B02299BC985002B0E9E /* MapRandomizerApp.xcdatamodeld */; };
+		DAD84B06299BC987002B0E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD84B05299BC987002B0E9E /* Assets.xcassets */; };
+		DAD84B09299BC987002B0E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD84B07299BC987002B0E9E /* LaunchScreen.storyboard */; };
+		DAD84B14299BC987002B0E9E /* MapRandomizerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84B13299BC987002B0E9E /* MapRandomizerAppTests.swift */; };
+		DAD84B1E299BC987002B0E9E /* MapRandomizerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84B1D299BC987002B0E9E /* MapRandomizerAppUITests.swift */; };
+		DAD84B20299BC987002B0E9E /* MapRandomizerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84B1F299BC987002B0E9E /* MapRandomizerAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAD84B10299BC987002B0E9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD84AEE299BC985002B0E9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD84AF5299BC985002B0E9E;
+			remoteInfo = MapRandomizerApp;
+		};
+		DAD84B1A299BC987002B0E9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD84AEE299BC985002B0E9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD84AF5299BC985002B0E9E;
+			remoteInfo = MapRandomizerApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAD84AF6299BC985002B0E9E /* MapRandomizerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRandomizerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD84AF9299BC985002B0E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAD84AFB299BC985002B0E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAD84AFD299BC985002B0E9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAD84B00299BC985002B0E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAD84B03299BC985002B0E9E /* MapRandomizerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapRandomizerApp.xcdatamodel; sourceTree = "<group>"; };
+		DAD84B05299BC987002B0E9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAD84B08299BC987002B0E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAD84B0A299BC987002B0E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD84B0F299BC987002B0E9E /* MapRandomizerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapRandomizerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD84B13299BC987002B0E9E /* MapRandomizerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRandomizerAppTests.swift; sourceTree = "<group>"; };
+		DAD84B19299BC987002B0E9E /* MapRandomizerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapRandomizerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD84B1D299BC987002B0E9E /* MapRandomizerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRandomizerAppUITests.swift; sourceTree = "<group>"; };
+		DAD84B1F299BC987002B0E9E /* MapRandomizerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRandomizerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAD84AF3299BC985002B0E9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD84B0C299BC987002B0E9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD84B16299BC987002B0E9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAD84AED299BC985002B0E9E = {
+			isa = PBXGroup;
+			children = (
+				DAD84AF8299BC985002B0E9E /* MapRandomizerApp */,
+				DAD84B12299BC987002B0E9E /* MapRandomizerAppTests */,
+				DAD84B1C299BC987002B0E9E /* MapRandomizerAppUITests */,
+				DAD84AF7299BC985002B0E9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAD84AF7299BC985002B0E9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAD84AF6299BC985002B0E9E /* MapRandomizerApp.app */,
+				DAD84B0F299BC987002B0E9E /* MapRandomizerAppTests.xctest */,
+				DAD84B19299BC987002B0E9E /* MapRandomizerAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAD84AF8299BC985002B0E9E /* MapRandomizerApp */ = {
+			isa = PBXGroup;
+			children = (
+				DAD84AF9299BC985002B0E9E /* AppDelegate.swift */,
+				DAD84AFB299BC985002B0E9E /* SceneDelegate.swift */,
+				DAD84AFD299BC985002B0E9E /* ViewController.swift */,
+				DAD84AFF299BC985002B0E9E /* Main.storyboard */,
+				DAD84B05299BC987002B0E9E /* Assets.xcassets */,
+				DAD84B07299BC987002B0E9E /* LaunchScreen.storyboard */,
+				DAD84B0A299BC987002B0E9E /* Info.plist */,
+				DAD84B02299BC985002B0E9E /* MapRandomizerApp.xcdatamodeld */,
+			);
+			path = MapRandomizerApp;
+			sourceTree = "<group>";
+		};
+		DAD84B12299BC987002B0E9E /* MapRandomizerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAD84B13299BC987002B0E9E /* MapRandomizerAppTests.swift */,
+			);
+			path = MapRandomizerAppTests;
+			sourceTree = "<group>";
+		};
+		DAD84B1C299BC987002B0E9E /* MapRandomizerAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAD84B1D299BC987002B0E9E /* MapRandomizerAppUITests.swift */,
+				DAD84B1F299BC987002B0E9E /* MapRandomizerAppUITestsLaunchTests.swift */,
+			);
+			path = MapRandomizerAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAD84AF5299BC985002B0E9E /* MapRandomizerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD84B23299BC987002B0E9E /* Build configuration list for PBXNativeTarget "MapRandomizerApp" */;
+			buildPhases = (
+				DAD84AF2299BC985002B0E9E /* Sources */,
+				DAD84AF3299BC985002B0E9E /* Frameworks */,
+				DAD84AF4299BC985002B0E9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapRandomizerApp;
+			productName = MapRandomizerApp;
+			productReference = DAD84AF6299BC985002B0E9E /* MapRandomizerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAD84B0E299BC987002B0E9E /* MapRandomizerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD84B26299BC987002B0E9E /* Build configuration list for PBXNativeTarget "MapRandomizerAppTests" */;
+			buildPhases = (
+				DAD84B0B299BC987002B0E9E /* Sources */,
+				DAD84B0C299BC987002B0E9E /* Frameworks */,
+				DAD84B0D299BC987002B0E9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD84B11299BC987002B0E9E /* PBXTargetDependency */,
+			);
+			name = MapRandomizerAppTests;
+			productName = MapRandomizerAppTests;
+			productReference = DAD84B0F299BC987002B0E9E /* MapRandomizerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAD84B18299BC987002B0E9E /* MapRandomizerAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD84B29299BC987002B0E9E /* Build configuration list for PBXNativeTarget "MapRandomizerAppUITests" */;
+			buildPhases = (
+				DAD84B15299BC987002B0E9E /* Sources */,
+				DAD84B16299BC987002B0E9E /* Frameworks */,
+				DAD84B17299BC987002B0E9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD84B1B299BC987002B0E9E /* PBXTargetDependency */,
+			);
+			name = MapRandomizerAppUITests;
+			productName = MapRandomizerAppUITests;
+			productReference = DAD84B19299BC987002B0E9E /* MapRandomizerAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAD84AEE299BC985002B0E9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DAD84AF5299BC985002B0E9E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DAD84B0E299BC987002B0E9E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DAD84AF5299BC985002B0E9E;
+					};
+					DAD84B18299BC987002B0E9E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DAD84AF5299BC985002B0E9E;
+					};
+				};
+			};
+			buildConfigurationList = DAD84AF1299BC985002B0E9E /* Build configuration list for PBXProject "MapRandomizerApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAD84AED299BC985002B0E9E;
+			productRefGroup = DAD84AF7299BC985002B0E9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAD84AF5299BC985002B0E9E /* MapRandomizerApp */,
+				DAD84B0E299BC987002B0E9E /* MapRandomizerAppTests */,
+				DAD84B18299BC987002B0E9E /* MapRandomizerAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAD84AF4299BC985002B0E9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD84B09299BC987002B0E9E /* LaunchScreen.storyboard in Resources */,
+				DAD84B06299BC987002B0E9E /* Assets.xcassets in Resources */,
+				DAD84B01299BC985002B0E9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD84B0D299BC987002B0E9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD84B17299BC987002B0E9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAD84AF2299BC985002B0E9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD84AFE299BC985002B0E9E /* ViewController.swift in Sources */,
+				DAD84AFA299BC985002B0E9E /* AppDelegate.swift in Sources */,
+				DAD84AFC299BC985002B0E9E /* SceneDelegate.swift in Sources */,
+				DAD84B04299BC985002B0E9E /* MapRandomizerApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD84B0B299BC987002B0E9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD84B14299BC987002B0E9E /* MapRandomizerAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD84B15299BC987002B0E9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD84B20299BC987002B0E9E /* MapRandomizerAppUITestsLaunchTests.swift in Sources */,
+				DAD84B1E299BC987002B0E9E /* MapRandomizerAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAD84B11299BC987002B0E9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD84AF5299BC985002B0E9E /* MapRandomizerApp */;
+			targetProxy = DAD84B10299BC987002B0E9E /* PBXContainerItemProxy */;
+		};
+		DAD84B1B299BC987002B0E9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD84AF5299BC985002B0E9E /* MapRandomizerApp */;
+			targetProxy = DAD84B1A299BC987002B0E9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAD84AFF299BC985002B0E9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAD84B00299BC985002B0E9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAD84B07299BC987002B0E9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAD84B08299BC987002B0E9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAD84B21299BC987002B0E9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAD84B22299BC987002B0E9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAD84B24299BC987002B0E9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHJ6CV5DWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapRandomizerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.MapRandomizerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAD84B25299BC987002B0E9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHJ6CV5DWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapRandomizerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.MapRandomizerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAD84B27299BC987002B0E9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHJ6CV5DWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.MapRandomizerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapRandomizerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MapRandomizerApp";
+			};
+			name = Debug;
+		};
+		DAD84B28299BC987002B0E9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHJ6CV5DWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.MapRandomizerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapRandomizerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MapRandomizerApp";
+			};
+			name = Release;
+		};
+		DAD84B2A299BC987002B0E9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHJ6CV5DWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.MapRandomizerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MapRandomizerApp;
+			};
+			name = Debug;
+		};
+		DAD84B2B299BC987002B0E9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHJ6CV5DWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.MapRandomizerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MapRandomizerApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAD84AF1299BC985002B0E9E /* Build configuration list for PBXProject "MapRandomizerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD84B21299BC987002B0E9E /* Debug */,
+				DAD84B22299BC987002B0E9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD84B23299BC987002B0E9E /* Build configuration list for PBXNativeTarget "MapRandomizerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD84B24299BC987002B0E9E /* Debug */,
+				DAD84B25299BC987002B0E9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD84B26299BC987002B0E9E /* Build configuration list for PBXNativeTarget "MapRandomizerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD84B27299BC987002B0E9E /* Debug */,
+				DAD84B28299BC987002B0E9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD84B29299BC987002B0E9E /* Build configuration list for PBXNativeTarget "MapRandomizerAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD84B2A299BC987002B0E9E /* Debug */,
+				DAD84B2B299BC987002B0E9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DAD84B02299BC985002B0E9E /* MapRandomizerApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAD84B03299BC985002B0E9E /* MapRandomizerApp.xcdatamodel */,
+			);
+			currentVersion = DAD84B03299BC985002B0E9E /* MapRandomizerApp.xcdatamodel */;
+			path = MapRandomizerApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DAD84AEE299BC985002B0E9E /* Project object */;
+}
