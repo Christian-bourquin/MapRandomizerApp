@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA707AF0299E6C1B00143E5E /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA707AEF299E6C1B00143E5E /* secondViewController.swift */; };
 		DAD84AFA299BC985002B0E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84AF9299BC985002B0E9E /* AppDelegate.swift */; };
 		DAD84AFC299BC985002B0E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84AFB299BC985002B0E9E /* SceneDelegate.swift */; };
 		DAD84AFE299BC985002B0E9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD84AFD299BC985002B0E9E /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA707AEF299E6C1B00143E5E /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		DAD84AF6299BC985002B0E9E /* MapRandomizerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRandomizerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD84AF9299BC985002B0E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD84AFB299BC985002B0E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				DAD84AFB299BC985002B0E9E /* SceneDelegate.swift */,
 				DAD84AFD299BC985002B0E9E /* ViewController.swift */,
 				DAD84AFF299BC985002B0E9E /* Main.storyboard */,
+				DA707AEF299E6C1B00143E5E /* secondViewController.swift */,
 				DAD84B05299BC987002B0E9E /* Assets.xcassets */,
 				DAD84B07299BC987002B0E9E /* LaunchScreen.storyboard */,
 				DAD84B0A299BC987002B0E9E /* Info.plist */,
@@ -264,6 +267,7 @@
 				DAD84AFE299BC985002B0E9E /* ViewController.swift in Sources */,
 				DAD84AFA299BC985002B0E9E /* AppDelegate.swift in Sources */,
 				DAD84AFC299BC985002B0E9E /* SceneDelegate.swift in Sources */,
+				DA707AF0299E6C1B00143E5E /* secondViewController.swift in Sources */,
 				DAD84B04299BC985002B0E9E /* MapRandomizerApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

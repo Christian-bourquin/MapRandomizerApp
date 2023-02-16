@@ -13,7 +13,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     var currentLocation : CLLocation!
     let locationManager = CLLocationManager()
     var parks : [MKMapItem] = []
-    
+    var selectedArray : [String] = [[]]
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -33,7 +33,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         currentLocation = locations[0]
     }
     
-    @IBAction func searchAction(_ sender: Any) {
+    @IBAction func searchAction(_ sender: UIBarButtonItem) {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = "parks"
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
@@ -52,7 +52,14 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         }
     }
     
+    @IBAction func toScreenAction(_ sender: UIBarButtonItem) {
+        
+        performSegue(withIdentifier: "toRandomScreen", sender: nil)
+    }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! secondViewController
+        nvc.incoming = selectedArray
+    }
 }
 

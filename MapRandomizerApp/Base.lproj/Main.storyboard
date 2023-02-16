@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eNS-Fy-Rhd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,33 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-nc-1IE">
-                                <rect key="frame" x="0.0" y="178" width="393" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-nc-1IE">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cz-xM-gtM">
-                                <rect key="frame" x="0.0" y="59" width="393" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="search"/>
-                                <connections>
-                                    <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBt-MN-WaL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Cz-xM-gtM" secondAttribute="trailing" id="DIM-PX-iy2"/>
-                            <constraint firstItem="3Cz-xM-gtM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FI5-Gd-T9A"/>
-                            <constraint firstItem="3Cz-xM-gtM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFy-ib-4qS"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0DY-0P-Cq6"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8aR-vI-f5I"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="azS-UB-Oro"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fbc-Wp-n8y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7uG-VN-mBV">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Randomizer" id="sPv-WF-3Jl">
+                            <connections>
+                                <action selector="toScreenAction:" destination="BYZ-38-t0r" id="bPE-Zd-lGn"/>
+                            </connections>
+                        </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter items here" textAlignment="center" minimumFontSize="17" id="DYr-mM-QbI">
+                            <rect key="frame" x="130" y="5" width="133.33333333333337" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" title="search" id="tDI-hG-wbc">
+                            <connections>
+                                <action selector="searchAction:" destination="BYZ-38-t0r" id="SBB-nl-a8f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="yV3-nc-1IE" id="S67-jE-RWo"/>
+                        <segue destination="Xr7-gu-XcV" kind="show" identifier="toRandomScreen" id="dsP-SD-cCE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.43511450381675" y="3.5211267605633805"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Xt0-0o-utl">
+            <objects>
+                <viewController id="Xr7-gu-XcV" customClass="secondViewController" customModule="MapRandomizerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lE5-86-s0i">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wMI-sA-Rsv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FbI-bV-gXR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aA0-nw-hkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="16"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sgF-Kf-rNl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNS-Fy-Rhd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Igi-PW-OkV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jWH-eE-VvQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qN-oN-rDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="26.717557251908396" y="3.5211267605633805"/>
         </scene>
