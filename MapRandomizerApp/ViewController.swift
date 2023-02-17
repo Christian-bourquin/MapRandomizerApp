@@ -21,14 +21,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
+
         mapView.showsUserLocation = true
         // Do any additional setup after loading the view.
         let center = CLLocationCoordinate2D(latitude: 42.2371, longitude: -88.3225)
-        let center2 = locationManager.location!.coordinate
+        //let center2 = locationManager.location!.coordinate
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         var region = MKCoordinateRegion(center: center, latitudinalMeters: 1600, longitudinalMeters: 1600)
-        var region2 = MKCoordinateRegion(center: center2, span: span)
-        mapView.setRegion(region2, animated: true)
+        //var region2 = MKCoordinateRegion(center: center2, span: span)
+        mapView.setRegion(region, animated: true)
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations[0]
