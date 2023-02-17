@@ -9,13 +9,21 @@ import UIKit
 
 class secondViewController: UIViewController {
     var incoming : [String] = []
+    
+    @IBOutlet weak var labelOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        labelOutlet.text = incoming[Int.random(in: 0..<incoming.count)]
+    }
 
+    @IBAction func randomize(_ sender: Any) {
+        labelOutlet.text = incoming[Int.random(in: 0..<incoming.count)]
+        
+    }
     /*
     // MARK: - Navigation
 

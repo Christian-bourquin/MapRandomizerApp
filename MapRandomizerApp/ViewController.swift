@@ -8,12 +8,13 @@
 import UIKit
 import MapKit
 class ViewController: UIViewController,CLLocationManagerDelegate {
-
+    @IBOutlet weak var textFieldOutlet: UITextField!
+    
     @IBOutlet weak var mapView: MKMapView!
     var currentLocation : CLLocation!
     let locationManager = CLLocationManager()
     var parks : [MKMapItem] = []
-    var selectedArray : [String] = [[]]
+    var selectedArray : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -35,7 +36,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     
     @IBAction func searchAction(_ sender: UIBarButtonItem) {
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "parks"
+        request.naturalLanguageQuery = textFieldOutlet.text ?? ""
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         let search = MKLocalSearch(request: request)
@@ -48,6 +49,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                 annotation.coordinate = mapItem.placemark.coordinate
                 annotation.title = mapItem.name
                 self.mapView.addAnnotation(annotation)
+                self.selectedArray.append(mapItem.name ?? "")
             }
         }
     }
