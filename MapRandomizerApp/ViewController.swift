@@ -35,6 +35,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     }
     
     @IBAction func searchAction(_ sender: UIBarButtonItem) {
+        for annotation in self.mapView.annotations {
+                self.mapView.removeAnnotation(annotation)
+            }
+        selectedArray.removeAll()
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = textFieldOutlet.text ?? ""
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
