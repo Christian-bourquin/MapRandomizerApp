@@ -18,17 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-nc-1IE">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="102.99999999999997" width="393" height="383.33333333333326"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-bC-0sG">
+                                <rect key="frame" x="0.0" y="486.33333333333326" width="393" height="331.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ebw-38-mWS">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebw-38-mWS" id="7tE-NU-XRn">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yV3-nc-1IE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0DY-0P-Cq6"/>
-                            <constraint firstItem="yV3-nc-1IE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8aR-vI-f5I"/>
-                            <constraint firstItem="yV3-nc-1IE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="azS-UB-Oro"/>
-                            <constraint firstItem="yV3-nc-1IE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fbc-Wp-n8y"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="NjC-OP-bmt"/>
+                            <constraint firstItem="gNX-bC-0sG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QrQ-T1-10E"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W3f-5E-qXT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gNX-bC-0sG" secondAttribute="bottom" id="guL-nv-enI"/>
+                            <constraint firstItem="gNX-bC-0sG" firstAttribute="top" secondItem="yV3-nc-1IE" secondAttribute="bottom" id="guu-kg-EKv"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kxv-9p-IeS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gNX-bC-0sG" secondAttribute="trailing" id="rnb-hz-o9f"/>
+                            <constraint firstItem="yV3-nc-1IE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tpr-dT-YMa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7uG-VN-mBV">
@@ -58,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="4"/>
+            <point key="canvasLocation" x="861.83206106870227" y="3.5211267605633805"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Xt0-0o-utl">
