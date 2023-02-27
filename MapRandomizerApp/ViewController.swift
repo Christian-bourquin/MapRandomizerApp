@@ -7,16 +7,25 @@
 
 import UIKit
 import MapKit
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
+    
+    
+    @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var textFieldOutlet: UITextField!
     
     @IBOutlet weak var mapView: MKMapView!
     var currentLocation : CLLocation!
     let locationManager = CLLocationManager()
+    let userLat = 42.2371
+    let userLong = -88.3225
+   
     var parks : [MKMapItem] = []
     var selectedArray : [String] = []
+    var distanceSelectedArray : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewOutlet.dataSource = self
+        tableViewOutlet.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -24,15 +33,26 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 
         mapView.showsUserLocation = true
         // Do any additional setup after loading the view.
-        let center = CLLocationCoordinate2D(latitude: 42.2371, longitude: -88.3225)
+        let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
         //let center2 = locationManager.location!.coordinate
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         var region = MKCoordinateRegion(center: center, latitudinalMeters: 1600, longitudinalMeters: 1600)
         //var region2 = MKCoordinateRegion(center: center2, span: span)
         mapView.setRegion(region, animated: true)
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell")!
+        cell.detailTextLabel?.text = distanceSelectedArray[indexPath.row]
+        cell.textLabel?.text = selectedArray[indexPath.row]
+        return cell
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations[0]
+        
     }
     
     @IBAction func searchAction(_ sender: UIBarButtonItem) {
@@ -52,6 +72,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                 self.parks.append(mapItem)
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = mapItem.placemark.coordinate
+                let lat = mapItem.placemark.coordinate.latitude
+                let long = mapItem.placemark.coordinate.longitude
+                let user = CLLocation(latitude: self.userLat, longitude: self.userLong)
+                let currentLoc = CLLocation(latitude: lat, longitude: long)
+                let distance = user.distance(from: currentLoc)
+                self.distanceSelectedArray.append(String(distance))
                 annotation.title = mapItem.name
                 self.mapView.addAnnotation(annotation)
                 self.selectedArray.append(mapItem.name ?? "")
