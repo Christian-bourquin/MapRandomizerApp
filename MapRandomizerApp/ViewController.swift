@@ -18,7 +18,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     let locationManager = CLLocationManager()
     let userLat = 42.2371
     let userLong = -88.3225
-   
+   var selectedCell = ""
     var parks : [MKMapItem] = []
     var selectedArray : [String] = []
     var distanceSelectedArray : [String] = []
@@ -46,7 +46,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell")!
-        cell.detailTextLabel?.text = distanceSelectedArray[indexPath.row]
+        cell.detailTextLabel?.text = "\(distanceSelectedArray[indexPath.row]) mi"
         cell.textLabel?.text = selectedArray[indexPath.row]
         return cell
     }
@@ -74,17 +74,32 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 annotation.coordinate = mapItem.placemark.coordinate
                 let lat = mapItem.placemark.coordinate.latitude
                 let long = mapItem.placemark.coordinate.longitude
+                //loop through and only remove the ones with check marks
                 let user = CLLocation(latitude: self.userLat, longitude: self.userLong)
                 let currentLoc = CLLocation(latitude: lat, longitude: long)
-                let distance = user.distance(from: currentLoc)
+                let preDistance = (user.distance(from: currentLoc))/1609
+                let distance = ceil(preDistance * 100) / 100.0
                 self.distanceSelectedArray.append(String(distance))
                 annotation.title = mapItem.name
                 self.mapView.addAnnotation(annotation)
                 self.selectedArray.append(mapItem.name ?? "")
+                self.distanceSelectedArray.sort()
+                self.tableViewOutlet.reloadData()
             }
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            if cell.accessoryType == .none{
+                cell.accessoryType = .checkmark
+            }
+            else{
+                cell.accessoryType = .none
+            }
+            }
+    }
+   
     @IBAction func toScreenAction(_ sender: UIBarButtonItem) {
         
         performSegue(withIdentifier: "toRandomScreen", sender: nil)

@@ -55,13 +55,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gNX-bC-0sG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FvN-KL-h0A"/>
+                            <constraint firstItem="gNX-bC-0sG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NK6-mB-1lX"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="NjC-OP-bmt"/>
-                            <constraint firstItem="gNX-bC-0sG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QrQ-T1-10E"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W3f-5E-qXT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gNX-bC-0sG" secondAttribute="bottom" id="guL-nv-enI"/>
-                            <constraint firstItem="gNX-bC-0sG" firstAttribute="top" secondItem="yV3-nc-1IE" secondAttribute="bottom" id="guu-kg-EKv"/>
+                            <constraint firstItem="gNX-bC-0sG" firstAttribute="top" secondItem="yV3-nc-1IE" secondAttribute="bottom" id="edr-Re-62J"/>
+                            <constraint firstItem="gNX-bC-0sG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="igG-Pn-qMi"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kxv-9p-IeS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gNX-bC-0sG" secondAttribute="trailing" id="rnb-hz-o9f"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tpr-dT-YMa"/>
                         </constraints>
                     </view>
