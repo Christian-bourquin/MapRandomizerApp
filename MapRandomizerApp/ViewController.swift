@@ -79,6 +79,17 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 let currentLoc = CLLocation(latitude: lat, longitude: long)
                 let preDistance = (user.distance(from: currentLoc))/1609
                 let distance = ceil(preDistance * 100) / 100.0
+
+                for i in 0...self.selectedArray.count {
+                    let indexPath = IndexPath(row: i, section: 0)
+                    
+                    if let cell = self.tableViewOutlet.cellForRow(at: indexPath){
+                        if cell.accessoryType == .none{
+                            
+                        }
+                        //start work here with removing
+                    }
+                }
                 self.distanceSelectedArray.append(String(distance))
                 annotation.title = mapItem.name
                 self.mapView.addAnnotation(annotation)
