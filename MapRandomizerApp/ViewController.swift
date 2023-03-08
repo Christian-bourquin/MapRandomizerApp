@@ -16,12 +16,18 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     @IBOutlet weak var mapView: MKMapView!
     var currentLocation : CLLocation!
     let locationManager = CLLocationManager()
+    var testing = 0
     let userLat = 42.2371
     let userLong = -88.3225
    var selectedCell = ""
     var parks : [MKMapItem] = []
     var selectedArray : [String] = []
     var distanceSelectedArray : [String] = []
+    var tempSelectedArray : [String] = []
+    var tempDistanceSelectedArray : [String] = []
+    var x = 0.05
+    var y = 0.05
+    @IBOutlet weak var radiusArrayOutlet: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.dataSource = self
@@ -35,7 +41,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         // Do any additional setup after loading the view.
         let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
         //let center2 = locationManager.location!.coordinate
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: x, longitudeDelta: y)
         var region = MKCoordinateRegion(center: center, latitudinalMeters: 1600, longitudinalMeters: 1600)
         //var region2 = MKCoordinateRegion(center: center2, span: span)
         mapView.setRegion(region, animated: true)
@@ -55,14 +61,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         
     }
     
-    @IBAction func searchAction(_ sender: UIBarButtonItem) {
+    @IBAction func searchAction(_ sender: Any) {
         for annotation in self.mapView.annotations {
                 self.mapView.removeAnnotation(annotation)
             }
         selectedArray.removeAll()
+        distanceSelectedArray.removeAll()
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = textFieldOutlet.text ?? ""
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: x, longitudeDelta: y)
         request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
@@ -84,29 +91,68 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                     let indexPath = IndexPath(row: i, section: 0)
                     
                     if let cell = self.tableViewOutlet.cellForRow(at: indexPath){
-                        if cell.accessoryType == .none{
-                            
-                        }
-                        //start work here with removing
-                    }
+                        cell.accessoryType = .none
+                                            }
                 }
+               
                 self.distanceSelectedArray.append(String(distance))
                 annotation.title = mapItem.name
                 self.mapView.addAnnotation(annotation)
                 self.selectedArray.append(mapItem.name ?? "")
-                self.distanceSelectedArray.sort()
                 self.tableViewOutlet.reloadData()
+                
             }
+            
         }
+        /*
+        let p = tempSelectedArray.count
+        if tempSelectedArray.count > 0 {
+            for i in 0...p {
+                
+               
+                distanceSelectedArray.insert(tempDistanceSelectedArray[i], at: 1)
+                selectedArray.insert(tempSelectedArray[i], at: i)
+                self.tableViewOutlet.reloadData()
+                
+            }
+
+        }
+         */
     }
+    
+    @IBAction func radiusSearchAction(_ sender: Any) {
+        if let out = Double(radiusArrayOutlet.text!) {
+            x = out/69
+            y = out/69
+            print(x*69)
+        }
+        else{
+            x = 0.05
+            y = 0.05
+        }
+        searchAction(sender)
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none{
                 cell.accessoryType = .checkmark
+                self.tempDistanceSelectedArray.append((cell.detailTextLabel?.text)!)
+                self.tempSelectedArray.append((cell.textLabel?.text)!)
             }
             else{
                 cell.accessoryType = .none
+                var index = -1
+                for i in 0...self.selectedArray.count {
+                    if (tempSelectedArray[i] == (cell.textLabel?.text)) {
+                            index = i;
+                            break;
+                        }
+                }
+                tempSelectedArray.remove(at: index)
+                tempDistanceSelectedArray.remove(at: index)
             }
             }
     }
@@ -119,6 +165,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! secondViewController
         nvc.incoming = selectedArray
+        nvc.incomingD = distanceSelectedArray
+        nvc.tIncoming = tempSelectedArray
+        nvc.tIncomingD = tempDistanceSelectedArray
+        
     }
 }
 
