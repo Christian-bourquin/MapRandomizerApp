@@ -68,8 +68,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         selectedArray.removeAll()
         distanceSelectedArray.removeAll()
         let request = MKLocalSearch.Request()
+        let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
         request.naturalLanguageQuery = textFieldOutlet.text ?? ""
         let span = MKCoordinateSpan(latitudeDelta: x, longitudeDelta: y)
+        var region = MKCoordinateRegion(center: center, latitudinalMeters: (x*69)*1609
+, longitudinalMeters: (y*69)*1609)
+        mapView.setRegion(region, animated: true)
+
         request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
@@ -100,7 +105,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 self.mapView.addAnnotation(annotation)
                 self.selectedArray.append(mapItem.name ?? "")
                 self.tableViewOutlet.reloadData()
-                
+                print(self.selectedArray.count)
+
             }
             
         }
@@ -125,6 +131,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
             x = out/69
             y = out/69
             print(x*69)
+            print(selectedArray.count)
         }
         else{
             x = 0.05
