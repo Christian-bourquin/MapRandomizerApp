@@ -130,20 +130,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-tZ-nyd">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iq2-lM-G27">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" systemColor="linkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-tZ-nyd">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mV1-A5-VbW">
+                                        <rect key="frame" x="0.0" y="54" width="393" height="630"/>
+                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                    </mapView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IqS-d8-juv">
+                                        <rect key="frame" x="0.0" y="684" width="393" height="32"/>
+                                        <segments>
+                                            <segment title="" image="car" catalog="system"/>
+                                            <segment title="" image="figure.walk" catalog="system"/>
+                                            <segment title="" image="train.side.front.car" catalog="system"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="segmentedControllerAction:" destination="Xr7-gu-XcV" eventType="valueChanged" id="oPw-Oy-P0x"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wMI-sA-Rsv"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wMI-sA-Rsv" firstAttribute="bottom" secondItem="1aW-tZ-nyd" secondAttribute="bottom" id="Zl8-Jx-8xA"/>
-                            <constraint firstItem="1aW-tZ-nyd" firstAttribute="top" secondItem="wMI-sA-Rsv" secondAttribute="top" id="h37-iI-qdF"/>
-                            <constraint firstItem="1aW-tZ-nyd" firstAttribute="leading" secondItem="wMI-sA-Rsv" secondAttribute="leading" id="khZ-Fg-dTR"/>
-                            <constraint firstItem="wMI-sA-Rsv" firstAttribute="trailing" secondItem="1aW-tZ-nyd" secondAttribute="trailing" id="lhQ-pA-WV6"/>
+                            <constraint firstItem="wMI-sA-Rsv" firstAttribute="trailing" secondItem="iq2-lM-G27" secondAttribute="trailing" id="7Ib-LL-zpN"/>
+                            <constraint firstItem="wMI-sA-Rsv" firstAttribute="bottom" secondItem="iq2-lM-G27" secondAttribute="bottom" id="G64-QB-oY0"/>
+                            <constraint firstItem="iq2-lM-G27" firstAttribute="leading" secondItem="wMI-sA-Rsv" secondAttribute="leading" id="U06-II-qv5"/>
+                            <constraint firstItem="iq2-lM-G27" firstAttribute="top" secondItem="wMI-sA-Rsv" secondAttribute="top" id="kZ9-l3-UeI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FbI-bV-gXR">
@@ -160,11 +181,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="labelOutlet" destination="1aW-tZ-nyd" id="XEp-kx-LsJ"/>
+                        <outlet property="mapViewOutlet" destination="mV1-A5-VbW" id="jcx-n3-zyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA0-nw-hkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="16"/>
+            <point key="canvasLocation" x="1567" y="-26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sgF-Kf-rNl">
@@ -186,6 +208,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <image name="train.side.front.car" catalog="system" width="128" height="72"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

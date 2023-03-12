@@ -25,6 +25,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     var distanceSelectedArray : [String] = []
     var tempSelectedArray : [String] = []
     var tempDistanceSelectedArray : [String] = []
+    var intoLong : [Double] = []
+    var intoLat : [Double] = []
+    var tempIntoLong : [Double] = []
+    var tempIntoLat : [Double] = []
     var x = 0.05
     var y = 0.05
     @IBOutlet weak var radiusArrayOutlet: UITextField!
@@ -67,6 +71,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
             }
         selectedArray.removeAll()
         distanceSelectedArray.removeAll()
+        intoLat.removeAll()
+        intoLong.removeAll()
         let request = MKLocalSearch.Request()
         let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
         request.naturalLanguageQuery = textFieldOutlet.text ?? ""
@@ -101,6 +107,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 }
                
                 self.distanceSelectedArray.append(String(distance))
+                self.intoLong.append(long)
+                self.intoLat.append(lat)
                 annotation.title = mapItem.name
                 self.mapView.addAnnotation(annotation)
                 self.selectedArray.append(mapItem.name ?? "")
@@ -146,6 +154,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none{
                 cell.accessoryType = .checkmark
+                var indexx = -1
+                for i in 0...self.selectedArray.count {
+                    if (tempSelectedArray[i] == (cell.textLabel?.text)) {
+                            indexx = i;
+                            break;
+                        }
+                }
+                self.tempIntoLat.append(intoLat[indexx])
+                self.tempIntoLong.append(intoLong[indexx])
                 self.tempDistanceSelectedArray.append((cell.detailTextLabel?.text)!)
                 self.tempSelectedArray.append((cell.textLabel?.text)!)
             }
@@ -160,6 +177,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 }
                 tempSelectedArray.remove(at: index)
                 tempDistanceSelectedArray.remove(at: index)
+                tempIntoLat.remove(at: index)
+                tempIntoLong.remove(at: index)
             }
             }
     }
@@ -175,6 +194,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         nvc.incomingD = distanceSelectedArray
         nvc.tIncoming = tempSelectedArray
         nvc.tIncomingD = tempDistanceSelectedArray
+        nvc.incomingLat = intoLat
+        nvc.incomingLong = intoLong
+        nvc.tIncomingLat = tempIntoLat
+        nvc.tIncomingLong = tempIntoLong
         
     }
 }
