@@ -4,7 +4,9 @@
 //
 //  Created by CHRISTIAN BOURQUIN on 2/14/23.
 //
-
+class MyPointAnnotation : MKPointAnnotation {
+    var pinTintColor: UIColor?
+}
 import UIKit
 import MapKit
 class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
@@ -90,6 +92,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 self.parks.append(mapItem)
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = mapItem.placemark.coordinate
+                annotation.pinTintColor = .
                 let lat = mapItem.placemark.coordinate.latitude
                 let long = mapItem.placemark.coordinate.longitude
                 //loop through and only remove the ones with check marks
@@ -154,6 +157,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none{
                 cell.accessoryType = .checkmark
+                
+               
+                self.tempDistanceSelectedArray.append((cell.detailTextLabel?.text)!)
+                self.tempSelectedArray.append((cell.textLabel?.text)!)
                 var indexx = -1
                 for i in 0...self.selectedArray.count {
                     if (tempSelectedArray[i] == (cell.textLabel?.text)) {
@@ -163,8 +170,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 }
                 self.tempIntoLat.append(intoLat[indexx])
                 self.tempIntoLong.append(intoLong[indexx])
-                self.tempDistanceSelectedArray.append((cell.detailTextLabel?.text)!)
-                self.tempSelectedArray.append((cell.textLabel?.text)!)
             }
             else{
                 cell.accessoryType = .none
