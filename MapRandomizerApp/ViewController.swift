@@ -4,11 +4,10 @@
 //
 //  Created by CHRISTIAN BOURQUIN on 2/14/23.
 //
-class MyPointAnnotation : MKPointAnnotation {
-    var pinTintColor: UIColor?
-}
+
 import UIKit
 import MapKit
+
 class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
     
     
@@ -89,10 +88,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
             guard let response = response
             else{return}
             for mapItem in response.mapItems{
-                self.parks.append(mapItem)
                 let annotation = MKPointAnnotation()
+                self.parks.append(mapItem)
                 annotation.coordinate = mapItem.placemark.coordinate
-                annotation.pinTintColor = .
                 let lat = mapItem.placemark.coordinate.latitude
                 let long = mapItem.placemark.coordinate.longitude
                 //loop through and only remove the ones with check marks
@@ -136,6 +134,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         }
          */
     }
+    
+    
     
     @IBAction func radiusSearchAction(_ sender: Any) {
         if let out = Double(radiusArrayOutlet.text!) {
