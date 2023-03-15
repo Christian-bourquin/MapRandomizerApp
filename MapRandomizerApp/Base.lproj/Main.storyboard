@@ -24,7 +24,7 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-bC-0sG">
-                                <rect key="frame" x="0.0" y="520.66666666666663" width="393" height="297.33333333333337"/>
+                                <rect key="frame" x="0.0" y="520.66666666666663" width="393" height="297"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" name="AccentColor"/>
                                 <color key="sectionIndexColor" name="AccentColor"/>
@@ -75,21 +75,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6o-3L-32r">
+                                <rect key="frame" x="0.0" y="817.66666666666663" width="393" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="directions"/>
+                                <connections>
+                                    <action selector="directionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GW9-7H-OSX"/>
+                                </connections>
+                            </button>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjt-WB-5zr">
+                                <rect key="frame" x="0.0" y="103" width="393" height="383"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H6o-3L-32r" secondAttribute="trailing" id="0MQ-dK-1wa"/>
+                            <constraint firstItem="vjt-WB-5zr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="719-Km-ylR"/>
+                            <constraint firstItem="vjt-WB-5zr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8i7-pn-QHJ"/>
                             <constraint firstItem="Xlg-qW-bGP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CVN-fX-QA5"/>
                             <constraint firstItem="Xlg-qW-bGP" firstAttribute="top" secondItem="yV3-nc-1IE" secondAttribute="bottom" id="FYZ-0a-NwE"/>
                             <constraint firstItem="gNX-bC-0sG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FsV-bl-DK6"/>
-                            <constraint firstItem="gNX-bC-0sG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JPJ-Gx-jC1"/>
                             <constraint firstItem="gNX-bC-0sG" firstAttribute="top" secondItem="Xlg-qW-bGP" secondAttribute="bottom" id="JrO-Z1-y3e"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="NjC-OP-bmt"/>
+                            <constraint firstItem="Xlg-qW-bGP" firstAttribute="top" secondItem="vjt-WB-5zr" secondAttribute="bottom" constant="0.33000000000000002" id="TAN-hj-GPs"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W3f-5E-qXT"/>
+                            <constraint firstItem="vjt-WB-5zr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aiH-Jx-iwC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xlg-qW-bGP" secondAttribute="trailing" id="avF-1a-06q"/>
+                            <constraint firstItem="H6o-3L-32r" firstAttribute="top" secondItem="gNX-bC-0sG" secondAttribute="bottom" id="fuJ-aS-HWB"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kxv-9p-IeS"/>
+                            <constraint firstAttribute="bottom" secondItem="H6o-3L-32r" secondAttribute="bottom" id="o3Y-M3-OX6"/>
                             <constraint firstItem="yV3-nc-1IE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tpr-dT-YMa"/>
                             <constraint firstItem="gNX-bC-0sG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vmu-wC-iw5"/>
+                            <constraint firstItem="H6o-3L-32r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vxi-x9-LRz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7uG-VN-mBV">
@@ -116,6 +135,7 @@
                         <outlet property="radiusArrayOutlet" destination="hFB-fo-xhL" id="izO-dh-jqe"/>
                         <outlet property="tableViewOutlet" destination="gNX-bC-0sG" id="JdP-hJ-nTW"/>
                         <outlet property="textFieldOutlet" destination="DYr-mM-QbI" id="sGT-qt-OQv"/>
+                        <outlet property="viewOutlet" destination="vjt-WB-5zr" id="TwS-wb-PEY"/>
                         <segue destination="Xr7-gu-XcV" kind="show" identifier="toRandomScreen" id="dsP-SD-cCE"/>
                     </connections>
                 </viewController>

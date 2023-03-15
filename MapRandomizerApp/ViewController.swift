@@ -15,6 +15,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     @IBOutlet weak var textFieldOutlet: UITextField!
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var viewOutlet: UIView!
+    
     var currentLocation : CLLocation!
     let locationManager = CLLocationManager()
     var testing = 0
@@ -24,6 +27,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     var parks : [MKMapItem] = []
     var selectedArray : [String] = []
     var distanceSelectedArray : [String] = []
+    let labelView = UILabel(frame: CGRect(x: 100, y: 200, width: 393, height: 383))
+
     var tempSelectedArray : [String] = []
     var tempDistanceSelectedArray : [String] = []
     var intoLong : [Double] = []
@@ -35,13 +40,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     @IBOutlet weak var radiusArrayOutlet: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewOutlet.addSubview(labelView)
+        labelView.center = viewOutlet.center
+        labelView.isHidden = true
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
-
+        viewOutlet.layer.cornerRadius = 24
         mapView.showsUserLocation = true
         // Do any additional setup after loading the view.
         let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
@@ -151,6 +159,23 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         searchAction(sender)
     }
     
+    
+    
+    @IBAction func directionsAction(_ sender: Any) {
+        if view.isHidden == true{
+            print("bye")
+            labelView.textColor = .blue
+            labelView.text = "1)first you will enter catagory of places you would like to visit, for example:parks,food,cities \n2) start here"
+            view.isHidden = false
+            labelView.isHidden = false
+        }
+        else{
+            print("hi")
+            view.isHidden = false
+            labelView.isHidden = false
+        }
+        
+    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
