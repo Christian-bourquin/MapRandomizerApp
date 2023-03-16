@@ -11,12 +11,12 @@ import MapKit
 class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
     
     
+    @IBOutlet weak var labelOutlet: UILabel!
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var textFieldOutlet: UITextField!
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var viewOutlet: UIView!
     
     var currentLocation : CLLocation!
     let locationManager = CLLocationManager()
@@ -27,7 +27,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     var parks : [MKMapItem] = []
     var selectedArray : [String] = []
     var distanceSelectedArray : [String] = []
-    let labelView = UILabel(frame: CGRect(x: 100, y: 200, width: 393, height: 383))
+    
 
     var tempSelectedArray : [String] = []
     var tempDistanceSelectedArray : [String] = []
@@ -40,16 +40,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     @IBOutlet weak var radiusArrayOutlet: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewOutlet.addSubview(labelView)
-        labelView.center = viewOutlet.center
-        labelView.isHidden = true
+        labelOutlet.isHidden = true
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
-        viewOutlet.layer.cornerRadius = 24
         mapView.showsUserLocation = true
         // Do any additional setup after loading the view.
         let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
@@ -162,17 +159,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     
     
     @IBAction func directionsAction(_ sender: Any) {
-        if view.isHidden == true{
+        if labelOutlet.isHidden == true{
             print("bye")
-            labelView.textColor = .blue
-            labelView.text = "1)first you will enter catagory of places you would like to visit, for example:parks,food,cities \n2) start here"
-            view.isHidden = false
-            labelView.isHidden = false
+            labelOutlet.textColor = .blue
+            labelOutlet.text = "1) first you will enter catagory of places you would like to visit, for example:parks,food,cities \n2) click the search once you have chosen a catagory\n3) the search range will automatically be 3.5 miles but you can enter miles and click search\n4) if you wish to save any of the locations then click them and they will save once randomized\n5) lastly you will click randomize to give you a random location for you and your friends to go to"
+            labelOutlet.isHidden = false
         }
         else{
             print("hi")
-            view.isHidden = false
-            labelView.isHidden = false
+            labelOutlet.isHidden = true
         }
         
     }
