@@ -89,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -119,6 +119,7 @@
                     <navigationItem key="navigationItem" id="7uG-VN-mBV">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Randomizer" id="sPv-WF-3Jl">
+                            <color key="tintColor" systemColor="tintColor"/>
                             <connections>
                                 <action selector="toScreenAction:" destination="BYZ-38-t0r" id="bPE-Zd-lGn"/>
                             </connections>
@@ -245,6 +246,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

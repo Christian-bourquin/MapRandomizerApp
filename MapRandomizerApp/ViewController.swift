@@ -27,7 +27,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     var parks : [MKMapItem] = []
     var selectedArray : [String] = []
     var distanceSelectedArray : [String] = []
-    
+    var done = 0
 
     var tempSelectedArray : [String] = []
     var tempDistanceSelectedArray : [String] = []
@@ -89,7 +89,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
 
         request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         let search = MKLocalSearch(request: request)
-        search.start { (response, error) in
+        search.start { [self] (response, error) in
             guard let response = response
             else{return}
             for mapItem in response.mapItems{
@@ -120,7 +120,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
                 self.selectedArray.append(mapItem.name ?? "")
                 self.tableViewOutlet.reloadData()
                 print(self.selectedArray.count)
-
+                if self.selectedArray.count > 1{
+                    self.done = 1
+                }
+                else {
+                    self.done = 0
+                }
             }
             
         }
@@ -209,8 +214,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     }
    
     @IBAction func toScreenAction(_ sender: UIBarButtonItem) {
-        
-        performSegue(withIdentifier: "toRandomScreen", sender: nil)
+        if done == 1 {
+            performSegue(withIdentifier: "toRandomScreen", sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
