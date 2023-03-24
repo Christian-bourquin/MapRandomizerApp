@@ -157,6 +157,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
     }
     
     
+    @IBAction func disapearKeyboard(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)
+    }
     
     @IBAction func directionsAction(_ sender: Any) {
         if labelOutlet.isHidden == true{
@@ -207,6 +211,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
             }
             }
     }
+    
+    
    
     @IBAction func toScreenAction(_ sender: UIBarButtonItem) {
         
