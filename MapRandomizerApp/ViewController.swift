@@ -48,6 +48,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
         // Do any additional setup after loading the view.
         let center = CLLocationCoordinate2D(latitude: userLat, longitude: userLong)
         //let center2 = locationManager.location!.coordinate
@@ -70,8 +73,15 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         currentLocation = locations[0]
         
     }
-    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     @IBAction func searchAction(_ sender: Any) {
+        if(textFieldOutlet.text == ""){
+            print("is empty")
+        }
+           else{
         for annotation in self.mapView.annotations {
                 self.mapView.removeAnnotation(annotation)
             }
@@ -89,45 +99,45 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
 
         request.region = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         let search = MKLocalSearch(request: request)
-        search.start { [self] (response, error) in
-            guard let response = response
-            else{return}
-            for mapItem in response.mapItems{
-                let annotation = MKPointAnnotation()
-                self.parks.append(mapItem)
-                annotation.coordinate = mapItem.placemark.coordinate
-                let lat = mapItem.placemark.coordinate.latitude
-                let long = mapItem.placemark.coordinate.longitude
-                //loop through and only remove the ones with check marks
-                let user = CLLocation(latitude: self.userLat, longitude: self.userLong)
-                let currentLoc = CLLocation(latitude: lat, longitude: long)
-                let preDistance = (user.distance(from: currentLoc))/1609
-                let distance = ceil(preDistance * 100) / 100.0
-
-                for i in 0...self.selectedArray.count {
-                    let indexPath = IndexPath(row: i, section: 0)
+            search.start { [self] (response, error) in
+                guard let response = response
+                else{return}
+                for mapItem in response.mapItems{
+                    let annotation = MKPointAnnotation()
+                    self.parks.append(mapItem)
+                    annotation.coordinate = mapItem.placemark.coordinate
+                    let lat = mapItem.placemark.coordinate.latitude
+                    let long = mapItem.placemark.coordinate.longitude
+                    //loop through and only remove the ones with check marks
+                    let user = CLLocation(latitude: self.userLat, longitude: self.userLong)
+                    let currentLoc = CLLocation(latitude: lat, longitude: long)
+                    let preDistance = (user.distance(from: currentLoc))/1609
+                    let distance = ceil(preDistance * 100) / 100.0
                     
-                    if let cell = self.tableViewOutlet.cellForRow(at: indexPath){
-                        cell.accessoryType = .none
-                                            }
-                }
-               
-                self.distanceSelectedArray.append(String(distance))
-                self.intoLong.append(long)
-                self.intoLat.append(lat)
-                annotation.title = mapItem.name
-                self.mapView.addAnnotation(annotation)
-                self.selectedArray.append(mapItem.name ?? "")
-                self.tableViewOutlet.reloadData()
-                print(self.selectedArray.count)
-                if self.selectedArray.count > 1{
-                    self.done = 1
-                }
-                else {
-                    self.done = 0
+                    for i in 0...self.selectedArray.count {
+                        let indexPath = IndexPath(row: i, section: 0)
+                        
+                        if let cell = self.tableViewOutlet.cellForRow(at: indexPath){
+                            cell.accessoryType = .none
+                        }
+                    }
+                    
+                    self.distanceSelectedArray.append(String(distance))
+                    self.intoLong.append(long)
+                    self.intoLat.append(lat)
+                    annotation.title = mapItem.name
+                    self.mapView.addAnnotation(annotation)
+                    self.selectedArray.append(mapItem.name ?? "")
+                    self.tableViewOutlet.reloadData()
+                    print(self.selectedArray.count)
+                    if self.selectedArray.count > 1{
+                        self.done = 1
+                    }
+                    else {
+                        self.done = 0
+                    }
                 }
             }
-            
         }
         /*
         let p = tempSelectedArray.count
@@ -151,6 +161,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate,UITableViewDele
         if let out = Double(radiusArrayOutlet.text!) {
             x = out/69
             y = out/69
+            if(x*69 > 20000){
+                x = 20000/69
+                y = 20000/69
+            }
             print(x*69)
             print(selectedArray.count)
         }

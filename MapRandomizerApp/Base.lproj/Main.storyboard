@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eNS-Fy-Rhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eMe-V8-wgc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,9 +26,10 @@
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-bC-0sG">
                                 <rect key="frame" x="0.0" y="520.66666666666663" width="393" height="255.66666666666663"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" name="AccentColor"/>
                                 <color key="sectionIndexColor" name="AccentColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexTrackingBackgroundColor" name="AccentColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="UMm-b8-UYw" detailTextLabel="Q5n-q3-BTZ" style="IBUITableViewCellStyleValue1" id="ebw-38-mWS">
@@ -67,6 +69,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLT-f0-Xvm">
                                         <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="34.333333333333336"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="search distance"/>
                                         <connections>
@@ -77,6 +80,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6o-3L-32r">
                                 <rect key="frame" x="0.0" y="776.33333333333337" width="393" height="75.666666666666629"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="directions">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
@@ -87,14 +91,15 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftv-oV-rjE">
                                 <rect key="frame" x="0.0" y="103" width="393" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H6o-3L-32r" secondAttribute="trailing" id="0MQ-dK-1wa"/>
                             <constraint firstItem="Xlg-qW-bGP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CVN-fX-QA5"/>
@@ -119,7 +124,7 @@
                     <navigationItem key="navigationItem" id="7uG-VN-mBV">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Randomizer" id="sPv-WF-3Jl">
-                            <color key="tintColor" systemColor="tintColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="toScreenAction:" destination="BYZ-38-t0r" id="bPE-Zd-lGn"/>
                             </connections>
@@ -131,6 +136,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" title="search" id="tDI-hG-wbc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="searchAction:" destination="BYZ-38-t0r" id="SBB-nl-a8f"/>
                             </connections>
@@ -147,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861.83206106870227" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2394.6564885496182" y="3.5211267605633805"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Xt0-0o-utl">
@@ -162,6 +168,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-tZ-nyd">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
+                                        <color key="tintColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
@@ -177,7 +184,7 @@
                                             <segment title="" image="figure.walk" catalog="system"/>
                                             <segment title="" image="train.side.front.car" catalog="system"/>
                                         </segments>
-                                        <color key="selectedSegmentTintColor" name="AccentColor"/>
+                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="segmentedControllerAction:" destination="Xr7-gu-XcV" eventType="valueChanged" id="oPw-Oy-P0x"/>
                                         </connections>
@@ -186,7 +193,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wMI-sA-Rsv"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.88627451660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wMI-sA-Rsv" firstAttribute="trailing" secondItem="iq2-lM-G27" secondAttribute="trailing" id="7Ib-LL-zpN"/>
                             <constraint firstItem="wMI-sA-Rsv" firstAttribute="bottom" secondItem="iq2-lM-G27" secondAttribute="bottom" id="G64-QB-oY0"/>
@@ -199,6 +206,7 @@
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Eu0-KS-IGS">
                             <rect key="frame" x="144.66666666666666" y="5" width="104" height="34.333333333333336"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="randomize"/>
                             <connections>
@@ -213,41 +221,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA0-nw-hkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="4"/>
+            <point key="canvasLocation" x="3185.4961832061067" y="3.5211267605633805"/>
+        </scene>
+        <!--Home Screen-->
+        <scene sceneID="MLn-kr-aIG">
+            <objects>
+                <viewController id="PtW-Nn-Xam" customClass="homeScreen" customModule="MapRandomizerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdx-ZF-Sku">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds background" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-Xx-FXC">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map Randomizer " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahw-TL-gxv">
+                                <rect key="frame" x="0.0" y="193" width="393" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An application for socialites and undecided." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-7Q-V4x">
+                                <rect key="frame" x="0.0" y="254.99999999999997" width="393" height="76.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AX-cw-Pzz">
+                                <rect key="frame" x="150" y="511.66666666666674" width="93" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="begin!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="eqh-gO-lMx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1xq-xV-4TD"/>
+                        <color key="backgroundColor" red="0.38823530080000002" green="0.69019609689999994" blue="0.87843137979999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1xq-xV-4TD" firstAttribute="trailing" secondItem="N7T-7Q-V4x" secondAttribute="trailing" id="6iQ-aM-Rx0"/>
+                            <constraint firstItem="4AX-cw-Pzz" firstAttribute="top" secondItem="N7T-7Q-V4x" secondAttribute="bottom" constant="180" id="7e3-CA-1cK"/>
+                            <constraint firstItem="Ahw-TL-gxv" firstAttribute="top" secondItem="1xq-xV-4TD" secondAttribute="top" constant="90" id="Arp-ht-Wjt"/>
+                            <constraint firstItem="1xq-xV-4TD" firstAttribute="trailing" secondItem="Ahw-TL-gxv" secondAttribute="trailing" id="ErY-tT-SzR"/>
+                            <constraint firstItem="N7T-7Q-V4x" firstAttribute="top" secondItem="Ahw-TL-gxv" secondAttribute="bottom" constant="25" id="F5j-jF-XEK"/>
+                            <constraint firstItem="1xq-xV-4TD" firstAttribute="trailing" secondItem="v2Z-Xx-FXC" secondAttribute="trailing" id="Kue-rD-wTz"/>
+                            <constraint firstItem="v2Z-Xx-FXC" firstAttribute="leading" secondItem="1xq-xV-4TD" secondAttribute="leading" id="OiQ-Lk-h04"/>
+                            <constraint firstItem="1xq-xV-4TD" firstAttribute="trailing" secondItem="4AX-cw-Pzz" secondAttribute="trailing" constant="150" id="bCQ-3d-i53"/>
+                            <constraint firstItem="N7T-7Q-V4x" firstAttribute="leading" secondItem="1xq-xV-4TD" secondAttribute="leading" id="db9-Wl-py2"/>
+                            <constraint firstItem="Ahw-TL-gxv" firstAttribute="leading" secondItem="1xq-xV-4TD" secondAttribute="leading" id="krK-6t-ddC"/>
+                            <constraint firstItem="v2Z-Xx-FXC" firstAttribute="top" secondItem="1xq-xV-4TD" secondAttribute="top" id="uW1-AS-R7j"/>
+                            <constraint firstItem="1xq-xV-4TD" firstAttribute="bottom" secondItem="v2Z-Xx-FXC" secondAttribute="bottom" id="x6V-Gg-Ext"/>
+                            <constraint firstItem="4AX-cw-Pzz" firstAttribute="leading" secondItem="1xq-xV-4TD" secondAttribute="leading" constant="150" id="yda-1p-riz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fso-qn-Hiq"/>
+                    <connections>
+                        <outlet property="labelOutlet" destination="Ahw-TL-gxv" id="mF4-I7-0DK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuH-ND-6f0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446.5648854961833" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="sgF-Kf-rNl">
+        <scene sceneID="BnY-UE-eXF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNS-Fy-Rhd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eMe-V8-wgc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Igi-PW-OkV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXS-ON-ug7">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jWH-eE-VvQ"/>
+                        <segue destination="PtW-Nn-Xam" kind="relationship" relationship="rootViewController" id="ZoJ-fq-RwB"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9qN-oN-rDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZP-eB-CPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.717557251908396" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="543" y="4"/>
         </scene>
     </scenes>
     <resources>
         <image name="car" catalog="system" width="128" height="95"/>
+        <image name="clouds background" width="275" height="183"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="train.side.front.car" catalog="system" width="128" height="72"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
